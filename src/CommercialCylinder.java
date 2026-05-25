@@ -36,12 +36,12 @@ public class CommercialCylinder extends LPGCylinder {
         double totalPrice = this.getBasePrice() * this.quantity;
 
         // Bulk discounts for commercial customers having more than
-        // 5 cylinders and 10 or more cylinders respectively.
-        if(this.quantity >=5){
-            totalPrice -=(totalPrice * 0.03);
-        }
-        else if(this.quantity >=10){
+        // 5 cylinders and 10 or more cylinders respective
+        if(this.quantity >=10){
             totalPrice -=(totalPrice * 0.05);
+        }
+        else if(this.quantity >=5){
+            totalPrice -=(totalPrice * 0.03);
         }
         return totalPrice;
     }

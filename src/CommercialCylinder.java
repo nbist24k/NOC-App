@@ -6,8 +6,8 @@ public class CommercialCylinder extends LPGCylinder {
     public CommercialCylinder(String cylinderId, String cylinderType, double basePrice, double weight,
                        String bookingId, String month, String businessLicense, int quantity) {
         super(cylinderId, cylinderType, basePrice, weight, bookingId, month);
-        this.businessLicense = businessLicense;
-        this.quantity = quantity;
+        setBusinessLicense(businessLicense);
+        setQuantity(quantity);
     }
 
     public String getBusinessLicense() {
@@ -15,7 +15,12 @@ public class CommercialCylinder extends LPGCylinder {
     }
 
     public void setBusinessLicense(String businessLicense) {
-        this.businessLicense = businessLicense;
+        if(businessLicense == null || businessLicense.isEmpty()) {
+            System.out.println("Invalid Business License");
+        }
+        else{
+            this.businessLicense = businessLicense;
+        }
     }
 
     public int getQuantity() {

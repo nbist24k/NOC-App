@@ -67,7 +67,12 @@ public abstract class LPGCylinder {
     }
 
     public void setBookingId(String bookingId) {
-        this.bookingId = bookingId;
+        if(bookingId == null || bookingId.isEmpty()){
+            System.out.println("Invalid booking id");
+        }
+        else{
+            this.bookingId = bookingId;
+        }
     }
 
     public String getMonth() {
@@ -75,7 +80,12 @@ public abstract class LPGCylinder {
     }
 
     public void setMonth(String month) {
-        this.month = month;
+        if(month == null || month.isEmpty()){
+            System.out.println("Invalid month");
+        }
+        else{
+            this.month = month;
+        }
     }
 
     // Abstract methods to be implemented classes domestic and commercial

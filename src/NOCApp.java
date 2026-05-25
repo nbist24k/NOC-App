@@ -4,6 +4,7 @@ public class NOCApp extends JFrame {
     public NOCApp() {
         setTitle("NOC LPG Management System");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setResizable(false);
         setSize(800, 600);
         setLocationRelativeTo(null);
         setVisible(true);

@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class NOCApp extends JFrame {
     public NOCApp() {
@@ -7,6 +8,10 @@ public class NOCApp extends JFrame {
         setResizable(false);
         setSize(800, 600);
         setLocationRelativeTo(null);
+
+        Image image = new ImageIcon("assets/unnamed.png").getImage();
+        setIconImage(image);
+
         setVisible(true);
     }
 

@@ -8,11 +8,11 @@ public abstract class LPGCylinder {
 
     public LPGCylinder(String cylinderId, String cylinderType, double basePrice, double weight, String bookingId, String month) {
         setCylinderId(cylinderId);
-        this.cylinderType = cylinderType;
+        setCylinderType(cylinderType);
         setBasePrice(basePrice);
         setWeight(weight);
-        this.bookingId = bookingId;
-        this.month = month;
+        setBookingId(bookingId);
+        setMonth(month);
     }
 
     public String getCylinderId() {
@@ -33,7 +33,13 @@ public abstract class LPGCylinder {
     }
 
     public void setCylinderType(String cylinderType) {
-        this.cylinderType = cylinderType;
+        if(cylinderType.equalsIgnoreCase("Domestic") ||
+                cylinderId.equalsIgnoreCase("Commercial")){
+            this.cylinderType = cylinderType;
+        }
+        else{
+            System.out.println("Invalid Cylinder Type");
+        }
     }
 
     public double getBasePrice() {

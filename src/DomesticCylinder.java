@@ -45,6 +45,7 @@ public class DomesticCylinder extends LPGCylinder{
     public void display(){
         System.out.println("-----------------------------------------------");
         System.out.println("Domestic Cylinder Details:");
+        System.out.println("Citizenship Number: " + this.getCitizenshipNumber());
         System.out.println("Cylinder ID: " + this.getCylinderId());
         System.out.println("Cylinder Type: " + this.getCylinderType());
         System.out.println("Base Price: " + this.getBasePrice());

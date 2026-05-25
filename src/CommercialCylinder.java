@@ -23,7 +23,7 @@ public class CommercialCylinder extends LPGCylinder {
     }
 
     public void setQuantity(int quantity) {
-        if(quantity < 0){
+        if(quantity <= 0){
             System.out.println("Invalid Quantity");
         }
         else{
@@ -38,10 +38,10 @@ public class CommercialCylinder extends LPGCylinder {
         // Bulk discounts for commercial customers having more than
         // 5 cylinders and 10 or more cylinders respectively.
         if(this.quantity >=5){
-            totalPrice -=(totalPrice * 0.3);
+            totalPrice -=(totalPrice * 0.03);
         }
-        if(this.quantity >=10){
-            totalPrice -=(totalPrice * 0.5);
+        else if(this.quantity >=10){
+            totalPrice -=(totalPrice * 0.05);
         }
         return totalPrice;
     }

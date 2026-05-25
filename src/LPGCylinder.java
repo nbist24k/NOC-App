@@ -36,7 +36,7 @@ public abstract class LPGCylinder {
     }
 
     public void setBasePrice(double basePrice) {
-        if(basePrice < 0){
+        if(basePrice <= 0){
             System.out.println("Invalid price");
         }
         else{
@@ -49,7 +49,12 @@ public abstract class LPGCylinder {
     }
 
     public void setWeight(double weight) {
-        this.weight = weight;
+        if(weight <= 0){
+            System.out.println("Invalid weight");
+        }
+        else{
+            this.weight = weight;
+        }
     }
 
     public String getBookingId() {

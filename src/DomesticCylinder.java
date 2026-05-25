@@ -15,7 +15,6 @@ public class DomesticCylinder extends LPGCylinder{
     }
 
     public void setSubsidyAmount(double subsidyAmount) {
-
         if(subsidyAmount > 0 && subsidyAmount <= this.getBasePrice()){
             this.subsidyAmount = subsidyAmount;
         }
@@ -29,7 +28,7 @@ public class DomesticCylinder extends LPGCylinder{
     }
 
     public void setCitizenshipNumber(String citizenshipNumber) {
-        if(citizenshipNumber.length() != 12){
+        if(citizenshipNumber.length() != 12 && !citizenshipNumber.matches("[0-9]+")){
             System.out.println("Invalid Citizenship Number");
         }
         else{

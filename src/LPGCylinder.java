@@ -6,7 +6,7 @@ public abstract class LPGCylinder {
     private String bookingId;
     private String month;
 
-    LPGCylinder(String cylinderId, String cylinderType, double basePrice, double weight, String bookingId, String month) {
+    public LPGCylinder(String cylinderId, String cylinderType, double basePrice, double weight, String bookingId, String month) {
         setCylinderId(cylinderId);
         this.cylinderType = cylinderType;
         setBasePrice(basePrice);

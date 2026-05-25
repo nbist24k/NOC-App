@@ -3,7 +3,7 @@ public class DomesticCylinder extends LPGCylinder{
     private double subsidyAmount;
     private String citizenshipNumber;
 
-    DomesticCylinder(String cylinderId, String cylinderType, double basePrice, double weight, String bookingId, String month,
+    public DomesticCylinder(String cylinderId, String cylinderType, double basePrice, double weight, String bookingId, String month,
                      double subsidyAmount, String citizenshipNumber) {
         super(cylinderId, cylinderType, basePrice, weight, bookingId, month);
         setSubsidyAmount(subsidyAmount);
@@ -28,7 +28,7 @@ public class DomesticCylinder extends LPGCylinder{
     }
 
     public void setCitizenshipNumber(String citizenshipNumber) {
-        if(citizenshipNumber.length() != 12 || !citizenshipNumber.matches("[0-9]+")){
+        if(!citizenshipNumber.matches("\\d{12}")){
             System.out.println("Invalid Citizenship Number");
         }
         else{
@@ -41,6 +41,7 @@ public class DomesticCylinder extends LPGCylinder{
         return this.getBasePrice() - this.subsidyAmount;
     }
 
+    @Override
     public void display(){
         System.out.println("-----------------------------------------------");
         System.out.println("Domestic Cylinder Details:");

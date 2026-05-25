@@ -34,7 +34,7 @@ public abstract class LPGCylinder {
 
     public void setCylinderType(String cylinderType) {
         if(cylinderType.equalsIgnoreCase("Domestic") ||
-                cylinderId.equalsIgnoreCase("Commercial")){
+                cylinderType.equalsIgnoreCase("Commercial")){
             this.cylinderType = cylinderType;
         }
         else{

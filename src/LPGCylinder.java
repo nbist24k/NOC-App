@@ -1,12 +1,12 @@
 public abstract class LPGCylinder {
-    private int cylinderId;
+    private String cylinderId;
     private String cylinderType;
     private double basePrice;
     private double weight;
     private String bookingId;
     private String month;
 
-    LPGCylinder(int cylinderId, String cylinderType, double basePrice, double weight, String bookingId, String month) {
+    LPGCylinder(String cylinderId, String cylinderType, double basePrice, double weight, String bookingId, String month) {
         this.cylinderId = cylinderId;
         this.cylinderType = cylinderType;
         this.basePrice = basePrice;
@@ -15,11 +15,11 @@ public abstract class LPGCylinder {
         this.month = month;
     }
 
-    public int getCylinderId() {
+    public String getCylinderId() {
         return cylinderId;
     }
 
-    public void setCylinderId(int cylinderId) {
+    public void setCylinderId(String cylinderId) {
         this.cylinderId = cylinderId;
     }
 

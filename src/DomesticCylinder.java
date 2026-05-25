@@ -3,7 +3,7 @@ public class DomesticCylinder extends LPGCylinder{
     private double subsidyAmount;
     private String citizenshipNumber;
 
-    DomesticCylinder(int cylinderId, String cylinderType, double basePrice, double weight, String bookingId, String month,
+    DomesticCylinder(String cylinderId, String cylinderType, double basePrice, double weight, String bookingId, String month,
                      double subsidyAmount, String citizenshipNumber) {
         super(cylinderId, cylinderType, basePrice, weight, bookingId, month);
         this.subsidyAmount = subsidyAmount;

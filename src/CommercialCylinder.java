@@ -3,7 +3,7 @@ public class CommercialCylinder extends LPGCylinder {
     private String businessLicense;
     private int quantity;
 
-    CommercialCylinder(int cylinderId, String cylinderType, double basePrice, double weight,
+    CommercialCylinder(String cylinderId, String cylinderType, double basePrice, double weight,
                        String bookingId, String month, String businessLicense, int quantity) {
         super(cylinderId, cylinderType, basePrice, weight, bookingId, month);
         this.businessLicense = businessLicense;

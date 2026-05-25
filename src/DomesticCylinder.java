@@ -38,11 +38,6 @@ public class DomesticCylinder extends LPGCylinder{
 
     @Override
     public double calculateFinalPrice(){
-
-        if (this.getSubsidyAmount() > this.getBasePrice()) {
-            System.out.println("Subsidy amount cannot exceed base price. Setting final price to 0.");
-            return 0;
-        }
         return this.getBasePrice() - this.getSubsidyAmount();
     }
 

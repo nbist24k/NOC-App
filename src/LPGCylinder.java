@@ -20,7 +20,12 @@ public abstract class LPGCylinder {
     }
 
     public void setCylinderId(String cylinderId) {
-        this.cylinderId = cylinderId;
+        if(cylinderId.matches("NOC-\\d{3}")){
+            this.cylinderId = cylinderId;
+        }
+        else{
+            System.out.println("Invalid Cylinder ID");
+        }
     }
 
     public String getCylinderType() {
